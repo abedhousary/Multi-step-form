@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Frontend Mentor | Multi-step form</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="left-con">
+        <div class="tabs-container">
+          <div class="tabs-holder">
+            <div class="tab">
+              <div class="step-holder active" id="step-1">1</div>
+              <div class="step-info">
+                <div class="title">Step 1</div>
+                <div class="tab-title">your info</div>
+              </div>
+            </div>
+
+            <div class="tab">
+              <div class="step-holder" id="step-2">2</div>
+              <div class="step-info">
+                <div class="title">Step 2</div>
+                <div class="tab-title">select plan</div>
+              </div>
+            </div>
+
+            <div class="tab">
+              <div class="step-holder" id="step-3">3</div>
+              <div class="step-info">
+                <div class="title">Step 3</div>
+                <div class="tab-title">Add-ons</div>
+              </div>
+            </div>
+
+            <div class="tab">
+              <div class="step-holder" id="step-4">4</div>
+              <div class="step-info">
+                <div class="title">Step 4</div>
+                <div class="tab-title">summary</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="right-con">
+        <div class="form-holder" id="Tab1">
+          <div class="form-title">Personal Info</div>
+          <div class="form-desc">
+            Please provide your name, email address, and phone number.
+          </div>
+          <div class="input-holder">
+            <div class="input-title">
+              Name<span class="error-msg hidden">This Field is required</span>
+            </div>
+            <input type="text" class="cus-inp" placeholder="Stephen King" />
+          </div>
+          <div class="input-holder">
+            <div class="input-title">
+              Email Address<span class="error-msg hidden"
+                >This Field is required</span
+              >
+            </div>
+            <input
+              type="text"
+              class="cus-inp"
+              placeholder="stephenking@lorem.com"
+              pattern="[1-9/@.]"
+              id="userEmail"
+            />
+          </div>
+          <div class="input-holder">
+            <div class="input-title">
+              Phone Number<span class="error-msg hidden"
+                >This Field is required</span
+              >
+            </div>
+            <input
+              type="text"
+              class="cus-inp"
+              placeholder="e.g. +1 234 567 890"
+            />
+          </div>
+        </div>
+
+        <div class="form-holder hidden" id="Tab2">
+          <div class="form-title">Select your plan</div>
+          <div class="form-desc">
+            You have the option of monthly or yearly billing.
+          </div>
+          <div class="plan-container">
+            <div class="plan active-plan">
+              <div class="plan-pic">
+                <img src="./assets/images/icon-arcade.svg" alt="" srcset="" />
+              </div>
+              <div class="plan-info">
+                <div class="plan-title">Arcade</div>
+                <div class="plan-price" id="arcadeprice">$9/mo</div>
+                <div class="yearly-msg">2 months free</div>
+              </div>
+            </div>
+
+            <div class="plan">
+              <div class="plan-pic">
+                <img src="./assets/images/icon-advanced.svg" alt="" srcset="" />
+              </div>
+              <div class="plan-info">
+                <div class="plan-title">Advanced</div>
+                <div class="plan-price" id="advancedprice">$12/mo</div>
+                <div class="yearly-msg">2 months free</div>
+              </div>
+            </div>
+
+            <div class="plan">
+              <div class="plan-pic">
+                <img src="./assets/images/icon-pro.svg" alt="" srcset="" />
+              </div>
+              <div class="plan-info">
+                <div class="plan-title">Pro</div>
+                <div class="plan-price" id="proprice">$15/mo</div>
+                <div class="yearly-msg">2 months free</div>
+              </div>
+            </div>
+          </div>
+          <div class="switcher-holder">
+            <div class="period">Monthly</div>
+            <div class="period-switcher">
+              <div class="toggler"></div>
+            </div>
+            <div class="period">Yearly</div>
+          </div>
+        </div>
+
+        <div class="form-holder hidden" id="Tab3">
+          <div class="form-title">Pick add-ons</div>
+          <div class="form-desc">
+            Add-ons help enhance your gaming experience.
+          </div>
+          <div class="add-on-container">
+            <div class="add-on">
+              <input type="checkbox" class="cus-check" />
+              <div class="addon-details">
+                <div class="addone-title">Online service</div>
+                <div class="addone-desc">Access to multiplayer games</div>
+              </div>
+              <div class="price-tag" id="OnS">+$1/mo</div>
+            </div>
+
+            <div class="add-on">
+              <input type="checkbox" class="cus-check" />
+              <div class="addon-details">
+                <div class="addone-title">Larger storage</div>
+                <div class="addone-desc">Extra 1TB of cloud save</div>
+              </div>
+              <div class="price-tag" id="larS">+$2/mo</div>
+            </div>
+
+            <div class="add-on">
+              <input type="checkbox" class="cus-check" />
+              <div class="addon-details">
+                <div class="addone-title">Customizable Profile</div>
+                <div class="addone-desc">Custom theme on your profile</div>
+              </div>
+              <div class="price-tag" id="cup">+$2/mo</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-holder hidden" id="Tab4">
+          <div class="form-title">Finishing up</div>
+          <div class="form-desc">
+            Double-check everything looks OK before confirming.
+          </div>
+          <div class="overall-con">
+            <div class="service-con">
+              <div class="service-details">
+                <div class="plan-title" id="chosenPlan">Arcade (Monthly)</div>
+                <a href="#" class="change">Change</a>
+              </div>
+              <div class="chosen-plan-price" id="planprice">$9/mo</div>
+            </div>
+            <div class="splitter"></div>
+            <div class="chosen-addons"></div>
+            <div class="total-con">
+              <div class="label-total">Total(per month)</div>
+              <div class="total-price"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-holder  centered hidden" id="Tab5">
+          <div class="img">
+            <img src="./assets/images/icon-thank-you.svg" />
+          </div>
+          <div class="form-title" style="margin-left: 0;margin-top: 20px;margin-bottom: 20px;">Thank you!</div>
+          <div class="form-msg">
+            Thanks for confirming your subscription! We hope you have fun using
+            our platform. If you ever need support, please feel free to email us
+            at <span id = "usremail">support@loremgaming.com.</span>
+          </div>
+        </div>
+
+        <div class="action-btns">
+          <div class="goback hidden">Go Back</div>
+          <div class="btn">Next Step</div>
+        </div>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
